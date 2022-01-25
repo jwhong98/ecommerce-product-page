@@ -9,16 +9,12 @@ import {
   Savings,
   Original,
   CartAction,
-  AmountSelector,
-  Minus,
-  Plus,
   AddButton,
   CartIcon,
 } from "./ContentElements";
 
-import minus from "../../images/icon-minus.svg";
-import plus from "../../images/icon-plus.svg";
 import cart from "../../images/icon-cart.svg";
+import AmountSelector from "../AmountSelector";
 
 const Content = () => {
   return (
@@ -36,10 +32,7 @@ const Content = () => {
         <Original>$250.00</Original>
       </Price>
       <CartAction>
-        <AmountSelector>
-          {/* <Minus src={minus} />
-          <Plus src={plus} /> */}
-        </AmountSelector>
+        <AmountSelector />
         <AddButton>
           <CartIcon src={cart} />
           Add to cart

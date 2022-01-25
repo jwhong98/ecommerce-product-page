@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const Header = styled.header`
   width: 100%;
-  height: 5rem;
+  height: 4rem;
   display: flex;
   align-items: center;
   padding: 0 1.5rem;
@@ -15,7 +15,10 @@ export const Nav = styled.nav`
   justify-content: space-between;
 `;
 
-export const Section = styled.div``;
+export const Section = styled.div`
+  display: flex;
+  align-items: center;
+`;
 
 export const ToggleMenu = styled.img`
   margin-right: 1rem;

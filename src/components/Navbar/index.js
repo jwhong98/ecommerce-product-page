@@ -15,12 +15,12 @@ import logo from "../../images/logo.svg";
 import cart from "../../images/icon-cart.svg";
 import profile from "../../images/image-avatar.png";
 
-const Navbar = () => {
+const Navbar = (props) => {
   return (
     <Header>
       <Nav>
         <Section>
-          <ToggleMenu src={menu} />
+          <ToggleMenu src={menu} onClick={props.onOpen} />
           <Logo src={logo} />
           <NavMenu />
         </Section>

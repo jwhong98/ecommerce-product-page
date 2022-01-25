@@ -9,7 +9,7 @@ export const ContentContainer = styled.section`
 export const Subtitle = styled.p`
   text-transform: uppercase;
   font-size: 0.75rem;
-  letter-spacing: 1px;
+  letter-spacing: 2px;
   color: hsl(26, 100%, 55%);
   font-weight: 700;
   margin-bottom: 0.75rem;
@@ -18,6 +18,7 @@ export const Subtitle = styled.p`
 export const Title = styled.h2`
   font-weight: 700;
   text-transform: capitalize;
+  font-size: 1.75rem;
 `;
 
 export const Description = styled.p`
@@ -56,12 +57,6 @@ export const CartAction = styled.div`
   width: 100%;
   display: flex;
   flex-direction: column;
-`;
-
-export const AmountSelector = styled.input`
-  background: hsl(223, 64%, 98%);
-  border: none;
-  margin-bottom: 1rem;
 `;
 
 export const Minus = styled.img``;
