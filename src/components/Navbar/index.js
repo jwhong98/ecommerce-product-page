@@ -25,7 +25,7 @@ const Navbar = (props) => {
           <NavMenu />
         </Section>
         <Personal>
-          <Cart src={cart} />
+          <Cart src={cart} onClick={props.onOpenCart} />
           <Profile src={profile} />
         </Personal>
       </Nav>

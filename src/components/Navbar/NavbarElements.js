@@ -22,6 +22,7 @@ export const Section = styled.div`
 
 export const ToggleMenu = styled.img`
   margin-right: 1rem;
+  cursor: pointer;
 `;
 
 export const Logo = styled.img``;
@@ -33,8 +34,10 @@ export const Personal = styled.div`
 
 export const Cart = styled.img`
   margin-right: 1.25rem;
+  cursor: pointer;
 `;
 
 export const Profile = styled.img`
   width: 1.5rem;
+  cursor: pointer;
 `;

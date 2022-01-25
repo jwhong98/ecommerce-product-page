@@ -18,7 +18,9 @@ export const Overlay = styled.div`
   padding: 1rem;
 `;
 
-export const CloseIcon = styled.img``;
+export const CloseIcon = styled.img`
+  cursor: pointer;
+`;
 
 export const Menu = styled.ul`
   list-style: none;
