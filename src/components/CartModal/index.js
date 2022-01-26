@@ -42,7 +42,7 @@ const CartModal = (props) => {
                       <TotalCost> ${cartCtx.totalAmount.toFixed(2)}</TotalCost>
                     </Cost>
                   </Info>
-                  <Trash src={trash} />
+                  <Trash src={trash} onClick={cartCtx.removeItem} />
                 </Item>
                 <Button>Checkout</Button>
               </CartContent>
