@@ -32,9 +32,24 @@ export const Personal = styled.div`
   align-items: center;
 `;
 
+export const Span = styled.span``;
+
 export const Cart = styled.img`
-  margin-right: 1.25rem;
   cursor: pointer;
+  margin-right: 1.25rem;
+`;
+
+export const Badge = styled.span`
+  vertical-align: top;
+  position: relative;
+  font-size: 0.5rem;
+  left: -0.75rem;
+  z-index: 5;
+  padding: 1px 8px;
+  background-color: hsl(26, 100%, 55%);
+  border-radius: 10px;
+  color: #fff;
+  margin-left: -1.25rem;
 `;
 
 export const Profile = styled.img`

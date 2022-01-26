@@ -73,6 +73,10 @@ export const AddButton = styled.button`
   justify-content: center;
   font-weight: 700;
   border-radius: 10px;
+
+  :hover {
+    opacity: 60%;
+  }
 `;
 
 export const CartIcon = styled.img`

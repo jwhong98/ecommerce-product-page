@@ -9,11 +9,8 @@ import {
   Savings,
   Original,
   CartAction,
-  AddButton,
-  CartIcon,
 } from "./ContentElements";
 
-import cart from "../../images/icon-cart.svg";
 import AmountSelector from "../AmountSelector";
 
 const Content = () => {
@@ -33,10 +30,6 @@ const Content = () => {
       </Price>
       <CartAction>
         <AmountSelector />
-        <AddButton>
-          <CartIcon src={cart} />
-          Add to cart
-        </AddButton>
       </CartAction>
     </ContentContainer>
   );

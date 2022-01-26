@@ -1,10 +1,11 @@
-import React from "react";
+import React, { useContext } from "react";
 import ReactDOM from "react-dom";
 import {
   Backdrop,
   Cart,
   CartHead,
   CartContent,
+  CartEmpty,
   Item,
   Img,
   Info,
@@ -17,33 +18,37 @@ import {
 } from "./CartModalElements";
 import item from "../../images/image-product-1-thumbnail.jpg";
 import trash from "../../images/icon-delete.svg";
+import CartContext from "../store/cart-context";
 
 const CartModal = (props) => {
   const portalElement = document.getElementById("overlay");
-  const price = 125.0;
-  const quantity = 3;
-  const totalCost = price * quantity;
+  const cartCtx = useContext(CartContext);
+
   return (
     <>
       {ReactDOM.createPortal(
         <Backdrop onClick={props.onCloseCart}>
           <Cart>
             <CartHead>Cart</CartHead>
-            <CartContent>
-              <Item>
-                <Img src={item} />
-                <Info>
-                  <Name>Autumn Limited Edition...</Name>
-                  <Cost>
-                    <Span>${price}</Span>
-                    <Span> x {quantity}</Span>
-                    <TotalCost> ${totalCost}</TotalCost>
-                  </Cost>
-                </Info>
-                <Trash src={trash} />
-              </Item>
-              <Button>Checkout</Button>
-            </CartContent>
+            {cartCtx.quantity !== 0 ? (
+              <CartContent>
+                <Item>
+                  <Img src={item} />
+                  <Info>
+                    <Name>Autumn Limited Edition...</Name>
+                    <Cost>
+                      <Span>${cartCtx.price.toFixed(2)}</Span>
+                      <Span> x {cartCtx.quantity}</Span>
+                      <TotalCost> ${cartCtx.totalAmount.toFixed(2)}</TotalCost>
+                    </Cost>
+                  </Info>
+                  <Trash src={trash} />
+                </Item>
+                <Button>Checkout</Button>
+              </CartContent>
+            ) : (
+              <CartEmpty>Your cart is empty.</CartEmpty>
+            )}
           </Cart>
         </Backdrop>,
         portalElement

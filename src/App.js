@@ -5,6 +5,7 @@ import Hero from "./components/Hero";
 import MenuModal from "./components/MenuModal";
 import Navbar from "./components/Navbar/index";
 import CartModal from "./components/CartModal";
+import CartProvider from "./components/store/CartProvider";
 
 function App() {
   const [isOpen, setIsOpen] = useState(false);
@@ -22,13 +23,13 @@ function App() {
     setOpenCart(false);
   };
   return (
-    <>
+    <CartProvider>
       {isOpen && <MenuModal onClose={onClose} />}
       {openCart && <CartModal onCloseCart={onCloseCart} />}
       <Navbar onOpen={onOpen} onOpenCart={onOpenCart} />
       <Hero />
       <Content />
-    </>
+    </CartProvider>
   );
 }
 

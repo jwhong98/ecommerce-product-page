@@ -14,8 +14,37 @@ export const Span = styled.span`
 
 export const Minus = styled.img`
   cursor: pointer;
+
+  :hover {
+    opacity: 60%;
+  }
 `;
 
 export const Plus = styled.img`
   cursor: pointer;
+
+  :hover {
+    opacity: 60%;
+  }
+`;
+
+export const AddButton = styled.button`
+  border: none;
+  background-color: hsl(26, 100%, 55%);
+  color: #fff;
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  border-radius: 10px;
+
+  :hover {
+    opacity: 60%;
+  }
+`;
+
+export const CartIcon = styled.img`
+  margin-right: 1rem;
+  filter: brightness(0) invert(1);
 `;

@@ -33,6 +33,16 @@ export const CartContent = styled.div`
   flex-direction: column;
 `;
 
+export const CartEmpty = styled.div`
+  width: 100%;
+  height: 11.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  color: hsl(219, 9%, 45%);
+`;
+
 export const Item = styled.div`
   display: flex;
   align-items: center;
@@ -73,4 +83,8 @@ export const Button = styled.button`
   padding: 1rem;
   font-weight: 700;
   margin-bottom: 1.25rem;
+
+  :hover {
+    opacity: 60%;
+  }
 `;
