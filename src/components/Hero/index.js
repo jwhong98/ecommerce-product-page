@@ -1,5 +1,5 @@
 import React from "react";
-import { HeroContainer, HeroImg } from "./HeroElements";
+import { HeroContainer } from "./HeroElements";
 import product1 from "../../images/image-product-1.jpg";
 import product2 from "../../images/image-product-2.jpg";
 import product3 from "../../images/image-product-3.jpg";
