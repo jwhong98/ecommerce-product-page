@@ -3,12 +3,17 @@ import ReactDOM from "react-dom";
 import { Backdrop, Overlay, CloseIcon, Menu, Item } from "./MenuModalElements";
 import close from "../../images/icon-close.svg";
 
+const Drop = (props) => {
+  return <Backdrop onClick={props.onClose}></Backdrop>;
+};
+
 const MenuModal = (props) => {
   const portalElement = document.getElementById("overlay");
   return (
     <>
       {ReactDOM.createPortal(
-        <Backdrop onClick={props.onClose}>
+        <>
+          <Drop onClose={props.onClose} />
           <Overlay>
             <CloseIcon src={close} onClick={props.onClose} />
             <Menu>
@@ -19,7 +24,7 @@ const MenuModal = (props) => {
               <Item>contact</Item>
             </Menu>
           </Overlay>
-        </Backdrop>,
+        </>,
         portalElement
       )}
     </>

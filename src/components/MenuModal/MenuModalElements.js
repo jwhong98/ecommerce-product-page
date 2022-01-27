@@ -12,9 +12,10 @@ export const Backdrop = styled.div`
 
 export const Overlay = styled.div`
   width: 70%;
+  position: fixed;
   background-color: #fff;
   height: 100%;
-  z-index: 21;
+  z-index: 30;
   padding: 1rem;
 `;
 

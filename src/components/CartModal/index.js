@@ -24,10 +24,15 @@ const CartModal = (props) => {
   const portalElement = document.getElementById("overlay");
   const cartCtx = useContext(CartContext);
 
+  const Drop = (props) => {
+    return <Backdrop onClick={props.onCloseCart}></Backdrop>;
+  };
+
   return (
     <>
       {ReactDOM.createPortal(
-        <Backdrop onClick={props.onCloseCart}>
+        <>
+          <Drop onCloseCart={props.onCloseCart}/>
           <Cart>
             <CartHead>Cart</CartHead>
             {cartCtx.quantity !== 0 ? (
@@ -50,7 +55,7 @@ const CartModal = (props) => {
               <CartEmpty>Your cart is empty.</CartEmpty>
             )}
           </Cart>
-        </Backdrop>,
+        </>,
         portalElement
       )}
     </>

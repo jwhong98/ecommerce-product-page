@@ -10,11 +10,12 @@ export const Backdrop = styled.div`
 `;
 
 export const Cart = styled.div`
+  position: fixed;
+  z-index: 30;
   margin-top: 4.5rem;
   width: 95%;
   background-color: #fff;
-  margin-left: auto;
-  margin-right: auto;
+  margin-left: 2.5%;
   border-radius: 5px;
   box-shadow: 0 5px 10px 1px rgba(0, 0, 0, 0.25);
 `;
