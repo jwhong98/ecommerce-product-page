@@ -1,11 +1,16 @@
 import React from "react";
-import { HeroContainer } from "./HeroElements";
+import { HeroContainer, HeroImg, ThumbnailContainer } from "./HeroElements";
 import product1 from "../../images/image-product-1.jpg";
 import product2 from "../../images/image-product-2.jpg";
 import product3 from "../../images/image-product-3.jpg";
 import product4 from "../../images/image-product-4.jpg";
+import { data } from "./data";
+import Thumbnails from "../Thumbnails";
 
 const Hero = () => {
+  const createThumbnail = (info) => {
+    return <Thumbnails key={info.id} img={info.thumbnail} />;
+  };
   return (
     <HeroContainer>
       <div
@@ -16,16 +21,32 @@ const Hero = () => {
       >
         <div className="carousel-inner">
           <div className="carousel-item active">
-            <img className="d-block w-100" src={product1} alt="First slide" />
+            <HeroImg
+              className="d-block w-100"
+              src={product1}
+              alt="First slide"
+            />
           </div>
           <div className="carousel-item">
-            <img className="d-block w-100" src={product2} alt="Second slide" />
+            <HeroImg
+              className="d-block w-100"
+              src={product2}
+              alt="Second slide"
+            />
           </div>
           <div className="carousel-item">
-            <img className="d-block w-100" src={product3} alt="Third slide" />
+            <HeroImg
+              className="d-block w-100"
+              src={product3}
+              alt="Third slide"
+            />
           </div>
           <div className="carousel-item">
-            <img className="d-block w-100" src={product4} alt="Third slide" />
+            <HeroImg
+              className="d-block w-100"
+              src={product4}
+              alt="Third slide"
+            />
           </div>
         </div>
         <a
@@ -53,6 +74,7 @@ const Hero = () => {
           <span className="sr-only">Next</span>
         </a>
       </div>
+      <ThumbnailContainer>{data.map(createThumbnail)}</ThumbnailContainer>
     </HeroContainer>
   );
 };

@@ -4,6 +4,7 @@ import Content from "./components/Content";
 import Hero from "./components/Hero";
 import MenuModal from "./components/MenuModal";
 import Navbar from "./components/Navbar/index";
+import Body from "./components/Body";
 import CartModal from "./components/CartModal";
 import CartProvider from "./components/store/CartProvider";
 
@@ -27,8 +28,10 @@ function App() {
       {isOpen && <MenuModal onClose={onClose} />}
       {openCart && <CartModal onCloseCart={onCloseCart} />}
       <Navbar onOpen={onOpen} onOpenCart={onOpenCart} />
-      <Hero />
-      <Content />
+      <Body>
+        <Hero />
+        <Content />
+      </Body>
     </CartProvider>
   );
 }

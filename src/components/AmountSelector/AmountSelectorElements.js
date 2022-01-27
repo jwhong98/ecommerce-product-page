@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { device } from "../../deviceSize";
 
 export const Span = styled.span`
   width: 100%;
@@ -10,6 +11,12 @@ export const Span = styled.span`
   border-radius: 10px;
   margin-bottom: 1rem;
   font-weight: 700;
+
+  @media ${device.desktop} {
+    max-width: 9rem;
+    margin-right: 1rem;
+    margin-bottom: 0;
+  }
 `;
 
 export const Minus = styled.img`
@@ -38,6 +45,7 @@ export const AddButton = styled.button`
   justify-content: center;
   font-weight: 700;
   border-radius: 10px;
+  width: 100%;
 
   :hover {
     opacity: 60%;
